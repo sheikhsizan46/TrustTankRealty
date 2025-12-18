@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Trust Tank Realty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- PREMIUM FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--tt-navy:#0a0a2a;--tt-gold:#f4d28a}
+    body{
+      background:var(--tt-navy);
+      color:#fff;
+      font-family:"Poppins",sans-serif;
+    }
+    h1,h2,h3,h4 { font-family:"Playfair Display",serif; }
+    .text-gold{color:var(--tt-gold)}
+    .btn-gold{background:linear-gradient(180deg,var(--tt-gold),#e8be64);color:#07102a;padding:0.9rem 1.25rem;border-radius:0.6rem;font-weight:700;}
+  </style>
+</head>
+<body>
+
+<nav class="flex justify-between px-6 py-4 lg:px-12">
+  <a href="index.html" class="flex items-center gap-3">
+    <img src="/fulllogo.jpg" style="height:44px">
+    <span class="text-xl font-bold">Trust Tank<span class="text-gold"> Realty</span></span>
+  </a>
+  <div class="hidden md:flex gap-6 bg-white/5 px-6 py-2 rounded-full">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html" class="text-gold font-bold">Contact</a>
+  </div>
+</nav>
+
+<header class="py-20 text-center bg-white/5">
+  <h1 class="text-4xl font-bold">Contact Us</h1>
+  <p class="text-white/75 mt-4 max-w-3xl mx-auto">Connect with our team for trusted real estate guidance.</p>
+</header>
+
+<main class="container mx-auto px-6 py-12 max-w-6xl">
+  <div class="grid md:grid-cols-2 gap-8">
+
+    <form id="contactForm" class="space-y-4 bg-white/5 p-6 rounded-2xl">
+      <label class="text-sm text-white/70">Full name</label>
+      <input name="name" required class="w-full bg-transparent border border-white/10 rounded-lg px-4 py-3 text-white" />
+
+      <label class="text-sm text-white/70">Email</label>
+      <input name="email" type="email" required class="w-full bg-transparent border border-white/10 rounded-lg px-4 py-3 text-white" />
+
+      <label class="text-sm text-white/70">Phone</label>
+      <input name="phone" class="w-full bg-transparent border border-white/10 rounded-lg px-4 py-3 text-white" />
+
+      <label class="text-sm text-white/70">Message</label>
+      <textarea name="message" rows="6" required class="w-full bg-transparent border border-white/10 rounded-lg px-4 py-3 text-white"></textarea>
+
+      <div>
+        <button class="btn-gold">Send Message</button>
+        <p id="formStatus" class="text-white/70 mt-3"></p>
+      </div>
+    </form>
+
+    <aside class="bg-white/5 p-6 rounded-2xl text-white/80">
+      <h3 class="text-gold text-xl font-semibold mb-3">Get in touch</h3>
+      <p>Email: <a href="mailto:info@trusttank.in" class="hover:text-gold">info@trusttank.in</a></p>
+      <p>WhatsApp: <a href="https://wa.me/1234567890" class="hover:text-gold">+91 8340187536</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/trusttankrealty" class="hover:text-gold">@trusttankrealty</a></p>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="bg-black/40 border-t border-white/10 pt-16 pb-8 text-sm">
+  <div class="container mx-auto px-6 max-w-7xl">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/fulllogo.jpg" style="height:40px">
+          <span class="text-xl font-bold">Trust Tank<span class="text-gold"> Realty</span></span>
+        </div>
+        <p class="text-white/70">Clarity, honesty and dignity in every transaction.</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3 text-white/70">
+          <li><a href="index.html" class="hover:text-gold">Home</a></li>
+          <li><a href="about.html" class="hover:text-gold">About Us</a></li>
+          <li><a href="service.html" class="hover:text-gold">Services</a></li>
+          <li><a href="contact.html" class="hover:text-gold">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-6">Contact</h4>
+        <ul class="space-y-3 text-white/70">
+          <li>Andheri, Mumbai</li>
+          <li>+91 8340187536</li>
+          <li>info@trusttank.in</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-6">Newsletter</h4>
+        <input class="w-full bg-white/5 px-4 py-3 rounded-lg" placeholder="Your email" />
+      </div>
+
+    </div>
+
+    <p class="text-center text-white/60 pt-6 border-t border-white/10">© 2025 Trust Tank Realty</p>
+
+  </div>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("formStatus").innerText = "Message sent successfully!";
+  this.reset();
+});
+</script>
+
+</body>
+</html>
