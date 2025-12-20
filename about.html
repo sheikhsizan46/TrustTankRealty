@@ -23,18 +23,22 @@
 </head>
 <body>
 
-  <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-12">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="fulllogo.jpg" alt="Trust Tank logo" style="height:44px; object-fit:contain;">
-      <span class="text-xl font-bold">Trust Tank<span class="text-gold"> Realty</span></span>
+  <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-12 transition-all duration-300">
+    <a href="index.html" class="flex items-center gap-3 cursor-pointer">
+       <img src="fulllogo.jpg" alt="Trust Tank logo" style="height:80px; object-fit:contain;">
+
+      </div>
+      <span class="text-2xl font-bold tracking-tight text-white">TrustTank<span class="text-gold"> Realty</span></span>
     </a>
 
-    <div class="hidden md:flex items-center gap-6 bg-white/5 px-6 py-2 rounded-full">
-      <a href="index.html" class="text-white/80 hover:text-gold">Home</a>
-      <a href="about.html" class="text-gold font-bold">About Us</a>
-      <a href="service.html" class="text-white/80 hover:text-gold">Services</a>
-      <a href="contact.html" class="text-white/80 hover:text-gold">Contact</a>
+    <div class="hidden md:flex items-center gap-6 glass-nav px-6 py-2 rounded-full border border-white/5">
+      <a href="index.html" class="text-white/90 hover:text-gold transition-colors text-sm">Home</a>
+      <a href="about.html" class="text-gold font-bold text-sm">About Us</a>
+      <a href="service.html" class="text-white/90 hover:text-gold transition-colors text-sm">Services</a>
+      <a href="contact.html" class="text-white/90 hover:text-gold transition-colors text-sm">Contact</a>
     </div>
+
+    <button id="mobile-menu-btn" class="md:hidden text-white p-2 bg-white/5 rounded-lg backdrop-blur-sm"><i data-lucide="menu"></i></button>
   </nav>
 
   <header class="py-20 text-center bg-white/5">
@@ -67,47 +71,62 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-black/40 border-t border-white/10 pt-16 pb-8 text-sm">
-    <div class="container mx-auto px-6 max-w-7xl">
+ <footer class="relative z-20 border-t border-white/5 pt-16 pb-8 text-sm" style="background:#1B0C4B;">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="fulllogo.jpg" alt="logo" style="height:80px">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <img src="fulllogo.jpg" alt="logo" style="height:40px">
-            <span class="text-xl font-bold">Trust Tank<span class="text-gold"> Realty</span></span>
-          </div>
-          <p class="text-white/70">Clarity, honesty and dignity in every transaction.</p>
+          <span class="text-xl font-bold">
+            Trust Tank<span class="text-gold"> Realty</span>
+          </span>
         </div>
-
-        <div>
-          <h4 class="font-bold mb-6">Quick Links</h4>
-          <ul class="space-y-3 text-white/70">
-            <li><a href="index.html" class="hover:text-gold">Home</a></li>
-            <li><a href="about.html" class="hover:text-gold">About Us</a></li>
-            <li><a href="service.html" class="hover:text-gold">Services</a></li>
-            <li><a href="contact.html" class="hover:text-gold">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-bold mb-6">Contact</h4>
-          <ul class="space-y-3 text-white/70">
-            <li>Andheri, Mumbai</li>
-            <li>+91 8340187536</li>
-            <li>info@trusttank.in</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-bold mb-6">Newsletter</h4>
-          <input class="w-full bg-white/5 px-4 py-3 rounded-lg" placeholder="Your email" />
-        </div>
+        <p class="text-white/70">
+          Clarity, honesty and dignity in every transaction — rooted in trust and driven by purpose.
+        </p>
       </div>
 
-      <p class="text-center text-white/60 pt-6 border-t border-white/10">© 2025 Trust Tank Realty</p>
+      <div>
+        <h4 class="text-white font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-4 text-white/70">
+          <li><a href="index.html" class="hover:text-gold">Home</a></li>
+          <li><a href="about.html" class="hover:text-gold">About Us</a></li>
+          <li><a href="service.html" class="hover:text-gold">Services</a></li>
+          <li><a href="contact.html" class="hover:text-gold">Contact</a></li>
+        </ul>
+      </div>
 
+      <div>
+        <h4 class="text-white font-bold mb-6">Contact</h4>
+        <ul class="space-y-4 text-white/70">
+          <li class="flex gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-gold"></i>Andheri, Mumbai</li>
+          <li class="flex gap-3"><i data-lucide="phone" class="w-5 h-5 text-gold"></i>+91 8340187536</li>
+          <li class="flex gap-3"><i data-lucide="mail" class="w-5 h-5 text-gold"></i>info@trusttank.in</li>
+        </ul>
+      </div>
+
+     <div>
+        <h4 class="text-white font-bold mb-6">Newsletter</h4>
+        <p class="text-white/70 mb-4">Subscribe for market updates.</p>
+        <form onsubmit="event.preventDefault(); alert('Subscribed!');" class="space-y-3">
+          <input type="email" placeholder="Your email"
+            class="w-full bg-[rgba(255,255,255,0.02)] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none">
+          <button class="w-full btn-gold">Subscribe</button>
+        </form>
+      </div>
     </div>
-  </footer>
+
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/60">© 2025 Trust Tank Realty. All rights reserved.</p>
+      <div class="flex gap-6 text-white/60">
+        <a href="#" class="hover:text-white">Terms</a>
+        <a href="#" class="hover:text-white">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 </body>
 </html>
